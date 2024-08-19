@@ -1,14 +1,10 @@
-import AddWidgetForm from "./AddWidgetForm"
-import CategoryList from "./CategoryList"
-import Widget from "./Widget"
-import WidgetDrawer from "./WidgetDrawer"
-import WidgetList from "./WidgetList"
+import DashNav from "./nav/DashNav"
 
 
 const Dashboard = () => {
   return (
-    <div>
-      <WidgetDrawer/>
+    <div className="sky-gradient-11">
+      <DashNav name={'CNAPP Dashboard'}/>
     </div>
   )
 }

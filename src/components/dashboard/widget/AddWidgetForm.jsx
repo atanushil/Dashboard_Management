@@ -3,7 +3,7 @@
 const AddWidgetForm = () => {
   return (
     <div>
-      from AddWidgetForm
+      
     </div>
   )
 }

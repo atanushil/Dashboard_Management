@@ -9,7 +9,11 @@ export default {
       colors:{
         gray:'#f1f5f9',
         border_color:'#e2e8f0',
-        warning:'#ef4444'
+        warning:'#ef4444',
+        body:'#a5f3fc',
+        zinc:'#d4d4d8',
+        grey:'#9ca3af',
+
       }
     },
   },

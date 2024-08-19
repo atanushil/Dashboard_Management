@@ -11,7 +11,7 @@ import {
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const Profile = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const handelDrawer = () => {
     setOpen(true);
   };
