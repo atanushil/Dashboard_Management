@@ -1,8 +1,5 @@
 import React from "react";
-import History from "./History";
-import Refreshbtn from "./Refreshbtn";
-import MenuBtn from "./MenuBtn";
-import PersonalizeDashboard from "./PersonalizeDashboard";
+import {PersonalizeDashboard,MenuBtn,Refreshbtn,History} from '../../../utils'
 
 const DashNav = ({ name }) => {
   return (

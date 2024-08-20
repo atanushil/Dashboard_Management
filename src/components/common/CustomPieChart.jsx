@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
-
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const {
@@ -21,9 +20,6 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} textAnchor="middle" fill={fill} fontSize={14}>
-        {/* {payload.name} */}
-      </text>
       <text x={cx} y={cy} dy={4} textAnchor="middle" fill={fill} fontSize={18}>
         {`${(percent * 100).toFixed(2)}%`}
       </text>
@@ -51,6 +47,7 @@ const renderActiveShape = (props) => {
 
 export default function CustomPieChart({ data }) {
   const PiechartSize = { innerRadius: 40, outerRadius: 50 };
+
   return (
     <div>
       {data.map((chart, index) => {
@@ -74,10 +71,8 @@ export default function CustomPieChart({ data }) {
         return (
           <div key={index} className="flex-center w-full h-full p-0">
             <div className="relative flex flex-col items-center">
-              <PieChart width={200} height={200} maxBarSize={1}>
+              <PieChart width={200} height={200}>
                 <Pie
-                  activeIndex={activeIndex}
-                  activeShape={renderActiveShape}
                   data={pieData}
                   cx={100}
                   cy={100}
@@ -85,7 +80,10 @@ export default function CustomPieChart({ data }) {
                   outerRadius={PiechartSize.outerRadius}
                   fill="#8884d8"
                   dataKey="value"
-                  onMouseEnter={onPieEnter}
+                  onMouseEnter={onPieEnter} // Optional: remove if not needed
+                  activeIndex={activeIndex} // Optional: remove if not needed
+                  activeShape={renderActiveShape} // Optional: remove if not needed
+                  
                 />
               </PieChart>
               <div className="absolute bottom-0 mb-2 text-center">

@@ -7,7 +7,6 @@ const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
   );
   const [selectedWidgets, setSelectedWidgets] = useState([]);
 
-
   const selectedCategoryObj = category.find(
     (item) => item.name === selectedCategory
   );
@@ -54,8 +53,8 @@ const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
             ))}
           </ul>
         </div>
-
-        <div className="widget-choose mt-2 pl-4 flex flex-col w-full gap-2 overflow-y-auto h-[80vh]">
+        {/*  */}
+        <div className="widget-choose mt-2 pl-4 flex flex-col w-full gap-2 overflow-y-auto h-[75vh]">
           {selectedCategoryObj?.content.map((widget, index) => (
             <div
               key={index}

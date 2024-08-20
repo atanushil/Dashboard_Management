@@ -16,13 +16,13 @@ const RightSlider = ({ heading, content, open, setOpen }) => {
       <Dialog
         open={open}
         onClose={() => setOpen(false)}
-        className="relative z-10"
+        className="relative z-10 max-h-screen"
       >
         <DialogBackdrop
           transition
-          className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"
+          className="fixed inset-0 max-h-screen bg-gray-500 bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"
         />
-        <div className="fixed inset-0 overflow-hidden ">
+        <div className="fixed inset-0 overflow-hidden max-h-screen">
           <div className="absolute inset-0 overflow-hidden ">
             <div className="pointer-events-none fixed inset-y-0  right-0  flex max-w-full  ">
               <DialogPanel
