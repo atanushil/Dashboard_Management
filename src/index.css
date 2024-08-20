@@ -25,7 +25,7 @@
 
 
     .widget {
-      @apply min-w-full  h-[60%] px-2 py-1 rounded-2xl cursor-pointer  bg-white;
+      @apply min-w-full h-[60vh]  px-2 py-1 rounded-2xl cursor-pointer  bg-white;
     }
     
     @media (min-width: 640px) {

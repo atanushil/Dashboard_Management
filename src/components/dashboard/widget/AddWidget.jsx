@@ -5,7 +5,7 @@ const AddWidget = () => {
     alert("make widget")
   }
   return (
-    <div className="widget flex-center cursor-pointer" onClick={handelClick}>
+    <div className="widget  flex-center cursor-pointer" onClick={handelClick}>
       <button className="flex items-center gap-3 border px-3 py-2 rounded-md sky-gradient-10 border-zinc text-grey hover:bg-sky-400 hover:text-slate-600 cursor-pointer whitespace-nowrap focus:shadow-lg">
         <p className="flex">
           <svg
