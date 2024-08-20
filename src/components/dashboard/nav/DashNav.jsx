@@ -1,8 +1,8 @@
 import React from "react";
-import AddWidget from "../widget/AddWidget";
 import History from "./History";
 import Refreshbtn from "./Refreshbtn";
 import MenuBtn from "./MenuBtn";
+import PersonalizeDashboard from "./PersonalizeDashboard";
 
 const DashNav = ({ name }) => {
   return (
@@ -11,7 +11,7 @@ const DashNav = ({ name }) => {
         <p className="text-xl text-black font-medium font-sans">{name}</p>
       </div>
       <div className="flex justify-end gap-3">
-        <AddWidget />
+        <PersonalizeDashboard />
         <Refreshbtn />
         <MenuBtn />
         <History />

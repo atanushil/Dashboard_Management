@@ -7,7 +7,6 @@ export default {
   theme: {
     extend: {
       colors:{
-        gray:'#f1f5f9',
         border_color:'#e2e8f0',
         warning:'#ef4444',
         body:'#a5f3fc',
