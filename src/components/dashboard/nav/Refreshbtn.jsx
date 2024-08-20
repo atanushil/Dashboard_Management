@@ -13,7 +13,7 @@ const Refreshbtn = () => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-5 rotate-90"
+        className="sm:size-5 size-4 rotate-90"
       >
         <path
           strokeLinecap="round"

@@ -21,13 +21,65 @@
 /* used in dashboard bg color*/
 
 
-
 @layer utilities {
-  .widget {
-    @apply md:min-w-[30%] max-w-[50%] min-w-[48%] md:h-60 h-80 px-2 py-1 rounded-md bg-white
-  }
+
+
+    .widget {
+      @apply min-w-full  h-[60%] px-2 py-1 rounded-2xl cursor-pointer  bg-white;
+    }
+    
+    @media (min-width: 640px) {
+      .widget {
+        @apply max-w-[50%] min-w-[48%] h-80 ; /* small screens */
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .widget {
+        @apply min-w-[48%] ; /*  medium screens and up */
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .widget {
+        @apply max-w-[30%] ; /*  large screens and up */
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .widget {
+        @apply w-[30%]  ; /* extra-large screens and up */
+      }
+    }
+    
+    @media (min-width: 1536px) {
+      .widget {
+        @apply  min-w-[32%] h-60 ; /*  extra-extra-large screens and up */
+      }
+    }
+
+  
+  
 
   .flex-center {
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center;
+  }
+
+  .custom-scrollbar {
+    /* For WebKit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+      width: 20px; /* Width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Hide the scrollbar track background */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #393737; /* Customize the scrollbar thumb color */
+    }
+
+    /* For Firefox */
+    scrollbar-color: grey transparent; /* Customize thumb and track color */
   }
 }

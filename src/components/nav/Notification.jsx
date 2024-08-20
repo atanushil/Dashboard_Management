@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Notification = ({status}) => {
-  const [Notification, setNotification] = useState(false);
+  const [Notification, setNotification] = useState(status);
   return (
     <div>
       <div className="w-fit h-full py-1 caret-transparent">

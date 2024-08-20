@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { RightSlider } from "../../../utils";
-import ShowWidgetForm from "./ShowWidgetForm";
+import { RightSlider, ShowWidgetForm } from "../../../utils";
 
 const PersonalizeDashboard = () => {
   const [open, setOpen] = useState(false);
@@ -19,14 +18,15 @@ const PersonalizeDashboard = () => {
         className="flex items-center gap-3 border px-3 py-2 rounded-md sky-gradient-10 border-zinc text-grey hover:bg-sky-400 hover:text-slate-600 cursor-pointer whitespace-nowrap"
         onClick={handleWidgetForm}
       >
-        Personalize
+        <p className="hidden sm:block">Personalize</p>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-6"
+          className="sm:size-6 size-5"
         >
           <path
             strokeLinecap="round"

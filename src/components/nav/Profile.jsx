@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import RightSlider from "../common/RightSlider";
+import {RightSlider} from "../../utils";
 
 const Profile = () => {
   const [open, setOpen] = useState(false);

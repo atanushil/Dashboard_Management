@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="flex items-center p-1.5 border border-border_color rounded-lg shadow-sm bg-gray w-4/5">
+    <div className="flex items-center p-1.5 border border-border_color rounded-lg shadow-sm bg-gray w-4/5 ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -21,7 +21,7 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Search anything..."
-        className="ml-2 w-full border-none outline-none text-gray-700 placeholder-gray-500 bg-inherit  "
+        className="ml-2 w-full border-none outline-none text-gray-700 placeholder:text-balance placeholder-gray-500 bg-inherit  "
       />
     </div>
   );

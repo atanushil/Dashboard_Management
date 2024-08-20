@@ -36,7 +36,7 @@ const RightSlider = ({ heading, content, open, setOpen }) => {
                       <button
                         type="button"
                         onClick={() => setOpen(false)}
-                        className="relative rounded-md  text-gray-300 hover:text-warning focus:outline-none focus:ring-2 focus:ring-white"
+                        className="relative rounded-md  text-gray-300 hover:text-warning focus:outline-none "
                       >
                         <span className="absolute -inset-2.5" />
                         <XMarkIcon aria-hidden="true" className="h-6 w-6" />

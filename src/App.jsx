@@ -18,7 +18,7 @@ function AppContent() {
   }, [location, navigate, dispatch]);
 
   return (
-    <div className="sky-gradient-11 z-0 w-full min-h-screen">
+    <div className="sky-gradient-11 z-0 w-full min-h-screen  custom-scrollbar ">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

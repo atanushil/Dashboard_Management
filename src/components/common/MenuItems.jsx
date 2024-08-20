@@ -23,11 +23,11 @@ export default function MenuItems({ options, onSelect }) {
     <Listbox value={selected} onChange={handleSelectOption}>
       <div className="relative w-full">
         <ListboxButton className="relative w-full cursor-default py-1.5 pr-10 text-left text-gray-900 shadow-sm focus:outline-none sm:text-sm sm:leading-6">
-          <span className="ml-3 block truncate">{selected.name}</span>
+          <span className="sm:ml-3 -ml-0 block whitespace-nowrap sm:text-lg text-md">{selected.name}</span>
           <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
             <ChevronDownIcon
               aria-hidden="true"
-              className="h-5 w-5 text-gray-400"
+              className="h-5 :w-5  text-gray-400"
             />
           </span>
         </ListboxButton>
