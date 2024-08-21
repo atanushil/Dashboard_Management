@@ -5,18 +5,18 @@ const CustomStackBarChart = ({ text }) => {
   const total = text.content.reduce((sum, item) => sum + item.num, 0);
 
   return (
-    <div className="grid grid-cols-1 grid-rows-5 gap-1">
+    <div className="grid grid-cols-1 grid-rows-5 gap-1 widget">
       {/* Heading */}
       <div className="md:justify-start flex-center flex py-2">
         <p className="md:whitespace-nowrap truncate px-1">{text.heading}</p>
       </div>
       {/* Total and Bar */}
-      <div className="flex flex-col gap-2 mb-2">
+      <div className="flex flex-col gap-1">
         <div className="flex items-center">
           <p className="whitespace-nowrap mr-2">Total:</p>
           <span className="text-grey hover:text-slate-500">{total}</span>
         </div>
-        <div className="relative w-full bg-gray-200 h-4 rounded-lg">
+        <div className="relative w-full bg-gray-200 h-4 md:h-8 rounded-lg">
           {text.content.reduce((acc, item, i) => {
             // Calculate percentage width for each segment
             const percentage = (item.num / total) * 100;

@@ -63,9 +63,9 @@ const Dashboard = () => {
           {PiechartData.map((item, i) => (
             <>
               {/* <Widget heading={item.heading} text={item} key={i} /> */}
-              <div key={i} className="widget">
+              {/* <div key={i} className="widget"> */}
                 <CustomStackBarChart text={item} />
-              </div>
+              {/* </div> */}
               {/* <div className="widget">
                 <CustomSplineChart
                   title="Sales Overview"
