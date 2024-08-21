@@ -80,9 +80,9 @@ export default function CustomPieChart({ data }) {
                   outerRadius={PiechartSize.outerRadius}
                   fill="#8884d8"
                   dataKey="value"
-                  onMouseEnter={onPieEnter} // Optional: remove if not needed
-                  activeIndex={activeIndex} // Optional: remove if not needed
-                  activeShape={renderActiveShape} // Optional: remove if not needed
+                  onMouseEnter={onPieEnter}
+                  activeIndex={activeIndex} 
+                  activeShape={renderActiveShape} 
                   
                 />
               </PieChart>

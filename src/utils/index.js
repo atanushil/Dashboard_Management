@@ -8,6 +8,7 @@ import Home from "../components/home/Home";
 import MenuItems from "../components/common/MenuItems";
 import RightSlider from "../components/common/RightSlider";
 import CustomPieChart from "../components/common/CustomPieChart";
+import CustomSplineChart from "../components/common/CustomSplineChart";
 
 import Dashboard from "../components/dashboard/Dashboard";
 
@@ -21,6 +22,7 @@ import ShowWidgetForm from "../components/dashboard/nav/ShowWidgetForm";
 import AddWidget from "../components/dashboard/widget/AddWidget";
 import Widget from "../components/dashboard/widget/Widget";
 
+import CustomStackBarChart from "../components/common/CustomStackBarChart";
 import Footer from "../components/common/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -82,4 +84,6 @@ export {
   Profile,
   SearchBar,
   Footer,
+  CustomSplineChart,
+  CustomStackBarChart
 };

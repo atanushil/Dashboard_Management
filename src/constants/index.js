@@ -181,7 +181,7 @@ export const PiechartData = [
     content: [
       { color: "#dc2626", text: "Failed", num: 50 },
       { color: "#16a34a", text: "Passed", num: 80 },
-      { color: "#f59e0b", text: "In Progress", num: 20 },
+      { color: "#f59e0b", text: "In Progress", num: 21 },
       { color: "black", text: "Not Available", num: 40 },
       { color: "#3b82f6", text: "Compliant", num: 60 },
     ],
@@ -212,4 +212,13 @@ export const PiechartData = [
   //     { color: '#60a5fa', text: "Low", num: 10 },
   //   ],
   // },
+];
+export const splineData = [
+  { x: new Date(2024, 7, 14), y: 1200 }, // Monday, August 14, 2024
+  { x: new Date(2024, 7, 15), y: 1500 }, // Tuesday, August 15, 2024
+  { x: new Date(2024, 7, 16), y: 1800 }, // Wednesday, August 16, 2024
+  { x: new Date(2024, 7, 17), y: 1100 }, // Thursday, August 17, 2024
+  { x: new Date(2024, 7, 18), y: 2000 }, // Friday, August 18, 2024
+  { x: new Date(2024, 7, 19), y: 1700 }, // Saturday, August 19, 2024
+  { x: new Date(2024, 7, 20), y: 2200 }, // Sunday, August 20, 2024
 ];

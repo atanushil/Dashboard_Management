@@ -10,7 +10,7 @@ const Widget = ({ heading, text }) => {
       </div>
 
       <div className="md:col-span-3 md:row-span-4 row-start-2 col-span-3 row-span-3 flex-center mb-8 caret-transparent">
-        <CustomPieChart data={[text]} />
+        <CustomPieChart data={[text]} />  
       </div>
 
       <div className="md:col-span-4 md:row-span-4 md:col-start-4 md:row-start-2 col-span-3 row-span-3 row-start-5 bg-inherit ">
