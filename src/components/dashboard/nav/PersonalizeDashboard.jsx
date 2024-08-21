@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { RightSlider, ShowWidgetForm } from "../../../utils";
 
 const PersonalizeDashboard = () => {

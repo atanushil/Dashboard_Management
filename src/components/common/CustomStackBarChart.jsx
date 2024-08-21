@@ -1,4 +1,3 @@
-import React from "react";
 
 const CustomStackBarChart = ({ text }) => {
   // Calculate total value
