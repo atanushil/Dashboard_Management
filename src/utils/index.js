@@ -38,17 +38,17 @@ const RedirectToPrevious = () => {
 
 export default RedirectToPrevious;
 
-import location from "/public/assets/location.gif";
-import discordBW from "/public/assets/discordBW.png";
-import discord from "/public/assets/discord.png";
-import phone from "/public/assets/call.gif";
-import github from "/public/assets/github.png";
-import githubBW from "/public/assets/githubBW.png";
-import linkedin from "/public/assets/linkedin.png";
-import linkedinBW from "/public/assets/linkedinBW.png";
-import mail from "/public/assets/sending-mail.gif";
-import twitter from "/public/assets/twitter.png";
-import twitterBW from "/public/assets/twitterBW.png";
+import location from "/assets/location.gif";
+import discordBW from "/assets/discordBW.png";
+import discord from "/assets/discord.png";
+import phone from "/assets/call.gif";
+import github from "/assets/github.png";
+import githubBW from "/assets/githubBW.png";
+import linkedin from "/assets/linkedin.png";
+import linkedinBW from "/assets/linkedinBW.png";
+import mail from "/assets/sending-mail.gif";
+import twitter from "/assets/twitter.png";
+import twitterBW from "/assets/twitterBW.png";
 export {
   location,
   discord,
