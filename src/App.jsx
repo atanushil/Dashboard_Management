@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentPath } from "./routingSlice";
-import { Dashboard, Home, NavBar } from "./utils";
+import { Dashboard, Footer, Home, NavBar } from "./utils";
 import './index.css'
 function AppContent() {
   const navigate = useNavigate();
@@ -25,6 +25,7 @@ function AppContent() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/*" element={<Home />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

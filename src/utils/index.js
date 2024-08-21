@@ -1,5 +1,3 @@
-
-
 import NavBar from "../components/nav/NavBar";
 import Notification from "../components/nav/Notification";
 import Profile from "../components/nav/Profile";
@@ -23,6 +21,7 @@ import ShowWidgetForm from "../components/dashboard/nav/ShowWidgetForm";
 import AddWidget from "../components/dashboard/widget/AddWidget";
 import Widget from "../components/dashboard/widget/Widget";
 
+import Footer from "../components/common/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +38,30 @@ const RedirectToPrevious = () => {
 
 export default RedirectToPrevious;
 
-
+import location from "/public/assets/location.gif";
+import discordBW from "/public/assets/discordBW.png";
+import discord from "/public/assets/discord.png";
+import phone from "/public/assets/call.gif";
+import github from "/public/assets/github.png";
+import githubBW from "/public/assets/githubBW.png";
+import linkedin from "/public/assets/linkedin.png";
+import linkedinBW from "/public/assets/linkedinBW.png";
+import mail from "/public/assets/sending-mail.gif";
+import twitter from "/public/assets/twitter.png";
+import twitterBW from "/public/assets/twitterBW.png";
+export {
+  location,
+  discord,
+  discordBW,
+  phone,
+  github,
+  githubBW,
+  linkedin,
+  linkedinBW,
+  mail,
+  twitter,
+  twitterBW,
+};
 export {
   NavBar,
   Home,
@@ -59,4 +81,5 @@ export {
   Notification,
   Profile,
   SearchBar,
+  Footer,
 };
