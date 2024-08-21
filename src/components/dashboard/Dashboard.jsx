@@ -49,7 +49,8 @@ const Dashboard = () => {
                   title="Sales Overview"
                   axisYTitle="Sales (in USD)"
                   axisYPrefix="$"
-                  data={splineData}
+                  data={splineData} 
+                  key={i}
                 />
               </div>
             </>
@@ -64,7 +65,7 @@ const Dashboard = () => {
             <>
               {/* <Widget heading={item.heading} text={item} key={i} /> */}
               {/* <div key={i} className="widget"> */}
-                <CustomStackBarChart text={item} />
+                <CustomStackBarChart text={item} key={i} />
               {/* </div> */}
               {/* <div className="widget">
                 <CustomSplineChart
