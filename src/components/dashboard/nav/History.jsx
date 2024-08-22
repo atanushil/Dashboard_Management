@@ -8,13 +8,13 @@ const History = () => {
     alert(selected)
   }
   return (
-    <div className="flex items-center border sm:w-44 w-34  border-violet-600 rounded-md ">
+    <div className="flex items-center border sm:w-44 w-34 px-1 border-violet-300 hover:border-violet-600 rounded-md hover:text-violet-600 text-violet-300 ">
       <div className="">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="sm:size-8 size-6 text-violet-700"
+          className="sm:size-8 size-6 "
         >
           <path
             fillRule="evenodd"
@@ -23,7 +23,7 @@ const History = () => {
           />
         </svg>
       </div>
-      <div className="relative sm:w-38 w-28 focus:ring-indigo-500 text-violet-600">
+      <div className="relative  focus:ring-indigo-500 ">
         <MenuItems options={DaysOptions} onSelect={handelSelect}/>
       </div>
     </div>

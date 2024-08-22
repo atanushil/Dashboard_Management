@@ -68,7 +68,7 @@ const NavBar = ({ user }) => {
         {currentPath === "/" ? null : (
           <>
             <SearchBar />
-            <div className="relative sm:block hidden lg:w-2/5 md:w-2/5 sm:w-3/5 2xl:w-1/4 border-border_color border rounded-lg bg-white">
+            <div className="relative sm:block py-1.5 hidden lg:w-2/5 md:w-2/5 sm:w-3/5 2xl:w-1/4 border-border_color border rounded-lg bg-white">
               <MenuItems options={navBarOptions} />
             </div>
           </>

@@ -195,23 +195,6 @@ export const PiechartData = [
       { color: "black", text: "Not Available", num: 40 },
     ],
   },
-  // {
-  //   heading: "Resource Utilization 3",
-  //   content: [
-  //     { color: "#8b5cf6", text: "CPU", num: 40 },
-  //     { color: "#ec4899", text: "Memory", num: 35 },
-  //     { color: "#22d3ee", text: "Storage", num: 25 },
-  //   ],
-  // },
-  // {
-  //   heading: "Incident Management 4",
-  //   content: [
-  //     { color: '#f87171', text: "Critical", num: 20 },
-  //     { color: '#facc15', text: "High", num: 30 },
-  //     { color: '#34d399', text: "Medium", num: 40 },
-  //     { color: '#60a5fa', text: "Low", num: 10 },
-  //   ],
-  // },
 ];
 export const splineData = [
   { x: new Date(2024, 7, 14), y: 1200 }, // Monday, August 14, 2024
