@@ -19,7 +19,8 @@ const Widget = () => {
         <p className="py-1 text-black text-lg font-light">Category name</p>
         <div className="flex justify-between w-full overflow-x-auto custom-scrollbar py-2 gap-3 md:gap-2 items-center">
           <CustomSplineChart
-            data={splinedata}
+            data={splinedata.data}
+            type={splinedata.type}
             heading={"A demo of synchronized AreaCharts"}
           />
           <AddWidget />

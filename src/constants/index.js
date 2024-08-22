@@ -58,15 +58,6 @@ export const category = [
       "Widget 9",
       "Widget 10",
       "Widget 11",
-      "Widget 12",
-      "Widget 13",
-      "Widget 14",
-      "Widget 15",
-      "Widget 16",
-      "Widget 17",
-      "Widget 18",
-      "Widget 19",
-      "Widget 20",
     ],
   },
   {
@@ -84,15 +75,6 @@ export const category = [
       "Widget 29",
       "Widget 30",
       "Widget 31",
-      "Widget 32",
-      "Widget 33",
-      "Widget 34",
-      "Widget 35",
-      "Widget 36",
-      "Widget 37",
-      "Widget 38",
-      "Widget 39",
-      "Widget 40",
     ],
   },
   {
@@ -108,17 +90,7 @@ export const category = [
       "Widget 47",
       "Widget 48",
       "Widget 49",
-      "Widget 50",
-      "Widget 51",
       "Widget 52",
-      "Widget 53",
-      "Widget 54",
-      "Widget 55",
-      "Widget 56",
-      "Widget 57",
-      "Widget 58",
-      "Widget 59",
-      "Widget 60",
     ],
   },
   {
@@ -136,15 +108,6 @@ export const category = [
       "Widget 69",
       "Widget 70",
       "Widget 71",
-      "Widget 72",
-      "Widget 73",
-      "Widget 74",
-      "Widget 75",
-      "Widget 76",
-      "Widget 77",
-      "Widget 78",
-      "Widget 79",
-      "Widget 80",
     ],
   },
   {
@@ -160,17 +123,6 @@ export const category = [
       "Widget 87",
       "Widget 88",
       "Widget 89",
-      "Widget 90",
-      "Widget 91",
-      "Widget 92",
-      "Widget 93",
-      "Widget 94",
-      "Widget 95",
-      "Widget 96",
-      "Widget 97",
-      "Widget 98",
-      "Widget 99",
-      "Widget 100",
     ],
   },
 ];
@@ -197,47 +149,57 @@ export const ChartData = [
   },
 ];
 
-export const splinedata = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+export const splinedata = {
+  type:"growth",
+  data: [
+    {
+      name: "Page A",
+      num: 800,
+      pv: 2400,
+      amt: 2400,
+      color: "#FF6384", // Red
+    },
+    {
+      name: "Page B",
+      num: 3000,
+      pv: 1398,
+      amt: 2210,
+      color: "#36A2EB", // Blue
+    },
+    {
+      name: "Page C",
+      num: 2000,
+      pv: 9800,
+      amt: 2290,
+      color: "#FFCE56", // Yellow
+    },
+    {
+      name: "Page D",
+      num: 2780,
+      pv: 3908,
+      amt: 2000,
+      color: "#4BC0C0", // Teal
+    },
+    {
+      name: "Page E",
+      num: 1890,
+      pv: 4800,
+      amt: 2181,
+      color: "#9966FF", // Purple
+    },
+    {
+      name: "Page F",
+      num: 2390,
+      pv: 3800,
+      amt: 2500,
+      color: "#FF9F40", // Orange
+    },
+    {
+      name: "Page G",
+      num: 3490,
+      pv: 4300,
+      amt: 2100,
+      color: "#4D5360", // Dark Gray
+    },
+  ],
+};
