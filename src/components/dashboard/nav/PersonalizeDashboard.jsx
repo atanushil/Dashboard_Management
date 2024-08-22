@@ -9,7 +9,8 @@ const PersonalizeDashboard = () => {
   };
 
   const handleConfirm = (selectedWidgets) => {
-    alert(`Selected Widgets: ${selectedWidgets.join(", ")}`);
+    console.log(selectedWidgets);
+    
   };
 
   return (

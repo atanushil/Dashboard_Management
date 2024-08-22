@@ -42,164 +42,186 @@ export const DaysOptions = [
     name: "Last 1 Year",
   },
 ];
-export const category = [
+
+export const categoryList = [
   {
     id: 1,
-    name: "CSPM",
-    content: [
-      "Widget 1",
-      "Widget 2",
-      "Widget 3",
-      "Widget 4",
-      "Widget 5",
-      "Widget 6",
-      "Widget 7",
-      "Widget 8",
-      "Widget 9",
-      "Widget 10",
-      "Widget 11",
+    categoryName: "CSPM",
+    widget: [
+      {
+        id: 1,
+        heading: "Security Overview",
+        chart: "PieChart",
+        tooltip: "Number of Incidents",
+        data: [
+          { color: "#dc2626", text: "Failed", num: 45 },
+          { color: "#16a34a", text: "Passed", num: 75 },
+          { color: "#f59e0b", text: "In Progress", num: 30 },
+          { color: "#f87171", text: "Not Available", num: 35 },
+          { color: "#3b82f6", text: "Compliant", num: 70 },
+        ],
+      },
+      {
+        id: 2,
+        heading: "Monthly Trends",
+        chart: "SplineChart",
+        tooltip: "Monthly View",
+        data: [
+          { color: "#dc2626", text: "Failed", num: 40 },
+          { color: "#16a34a", text: "Passed", num: 85 },
+          { color: "#f59e0b", text: "In Progress", num: 25 },
+          { color: "#f87171", text: "Not Available", num: 45 },
+          { color: "#3b82f6", text: "Compliant", num: 65 },
+        ],
+      },
+      {
+        id: 3,
+        heading: "Compliance Score",
+        chart: "StackBarChart",
+        tooltip: "Compliance Rate",
+        data: [
+          { color: "#dc2626", text: "Failed", num: 55 },
+          { color: "#16a34a", text: "Passed", num: 70 },
+          { color: "#f59e0b", text: "In Progress", num: 20 },
+          { color: "#f87171", text: "Not Available", num: 50 },
+          { color: "#3b82f6", text: "Compliant", num: 60 },
+        ],
+      },
     ],
   },
   {
     id: 2,
-    name: "CWPP",
-    content: [
-      "Widget 21",
-      "Widget 22",
-      "Widget 23",
-      "Widget 24",
-      "Widget 25",
-      "Widget 26",
-      "Widget 27",
-      "Widget 28",
-      "Widget 29",
-      "Widget 30",
-      "Widget 31",
+    categoryName: "CWPP",
+    widget: [
+      {
+        id: 1,
+        heading: "Threat Detection",
+        chart: "PieChart",
+        tooltip: "Threat Count",
+        data: [
+          { color: "#dc2626", text: "Critical", num: 40 },
+          { color: "#16a34a", text: "Low", num: 90 },
+          { color: "#f59e0b", text: "Medium", num: 35 },
+          { color: "black", text: "Unknown", num: 30 },
+          { color: "#3b82f6", text: "Safe", num: 50 },
+        ],
+      },
+      {
+        id: 2,
+        heading: "Vulnerability Trends",
+        chart: "SplineChart",
+        tooltip: "Vulnerability Analysis",
+        data: [
+          { color: "#dc2626", text: "Critical", num: 60 },
+          { color: "#16a34a", text: "Low", num: 70 },
+          { color: "#f59e0b", text: "Medium", num: 20 },
+          { color: "black", text: "Unknown", num: 25 },
+          { color: "#3b82f6", text: "Safe", num: 55 },
+        ],
+      },
+      {
+        id: 3,
+        heading: "Risk Assessment",
+        chart: "StackBarChart",
+        tooltip: "Risk Score",
+        data: [
+          { color: "#dc2626", text: "High", num: 50 },
+          { color: "#16a34a", text: "Medium", num: 80 },
+          { color: "#f59e0b", text: "Low", num: 30 },
+          { color: "black", text: "Unclassified", num: 35 },
+          { color: "#3b82f6", text: "No Risk", num: 60 },
+        ],
+      },
     ],
   },
   {
     id: 3,
-    name: "CIEM",
-    content: [
-      "Widget 41",
-      "Widget 42",
-      "Widget 43",
-      "Widget 44",
-      "Widget 45",
-      "Widget 46",
-      "Widget 47",
-      "Widget 48",
-      "Widget 49",
-      "Widget 52",
+    categoryName: "Application Security",
+    widget: [
+      {
+        id: 1,
+        heading: "Vulnerabilities by Severity",
+        chart: "PieChart",
+        tooltip: "Severity Count",
+        data: [
+          { color: "#dc2626", text: "Critical", num: 25 },
+          { color: "#f59e0b", text: "High", num: 40 },
+          { color: "#f87171", text: "Medium", num: 55 },
+          { color: "#16a34a", text: "Low", num: 30 },
+          { color: "#3b82f6", text: "Info", num: 20 },
+        ],
+      },
+      {
+        id: 2,
+        heading: "Application Activity",
+        chart: "SplineChart",
+        tooltip: "Activity Trends",
+        data: [
+          { color: "#dc2626", text: "Errors", num: 15 },
+          { color: "#16a34a", text: "Success", num: 90 },
+          { color: "#f59e0b", text: "Warnings", num: 25 },
+          { color: "#f87171", text: "Failures", num: 20 },
+          { color: "#3b82f6", text: "Info", num: 40 },
+        ],
+      },
+      {
+        id: 3,
+        heading: "User Access Levels",
+        chart: "StackBarChart",
+        tooltip: "Access Distribution",
+        data: [
+          { color: "#dc2626", text: "Admin", num: 10 },
+          { color: "#16a34a", text: "User", num: 70 },
+          { color: "#f59e0b", text: "Guest", num: 20 },
+          { color: "#f87171", text: "Pending", num: 15 },
+          { color: "#3b82f6", text: "Restricted", num: 30 },
+        ],
+      },
     ],
   },
   {
     id: 4,
-    name: "SOAR",
-    content: [
-      "Widget 61",
-      "Widget 62",
-      "Widget 63",
-      "Widget 64",
-      "Widget 65",
-      "Widget 66",
-      "Widget 67",
-      "Widget 68",
-      "Widget 69",
-      "Widget 70",
-      "Widget 71",
-    ],
-  },
-  {
-    id: 5,
-    name: "SIEM",
-    content: [
-      "Widget 81",
-      "Widget 82",
-      "Widget 83",
-      "Widget 84",
-      "Widget 85",
-      "Widget 86",
-      "Widget 87",
-      "Widget 88",
-      "Widget 89",
-    ],
-  },
-];
-
-export const ChartData = [
-  {
-    heading: "Cloud Account 1",
-    content: [
-      { color: "#dc2626", text: "Failed", num: 50 },
-      { color: "#16a34a", text: "Passed", num: 80 },
-      { color: "#f59e0b", text: "In Progress", num: 21 },
-      { color: "black", text: "Not Available", num: 40 },
-      { color: "#3b82f6", text: "Compliant", num: 60 },
-    ],
-  },
-  {
-    heading: "Security Compliance 2",
-    content: [
-      { color: "#3b82f6", text: "Compliant", num: 60 },
-      { color: "#ef4444", text: "Non-Compliant", num: 30 },
-      { color: "#10b981", text: "Pending", num: 10 },
-      { color: "black", text: "Not Available", num: 40 },
+    categoryName: "Network Security",
+    widget: [
+      {
+        id: 1,
+        heading: "Incident Reports",
+        chart: "PieChart",
+        tooltip: "Incident Count",
+        data: [
+          { color: "#dc2626", text: "Critical", num: 20 },
+          { color: "#16a34a", text: "Major", num: 60 },
+          { color: "#f59e0b", text: "Minor", num: 50 },
+          { color: "#f87171", text: "Trivial", num: 15 },
+          { color: "#3b82f6", text: "No Issue", num: 45 },
+        ],
+      },
+      {
+        id: 2,
+        heading: "Traffic Analysis",
+        chart: "SplineChart",
+        tooltip: "Traffic Trends",
+        data: [
+          { color: "#dc2626", text: "High Traffic", num: 30 },
+          { color: "#16a34a", text: "Normal", num: 85 },
+          { color: "#f59e0b", text: "Low Traffic", num: 20 },
+          { color: "#f87171", text: "DDoS Attack", num: 10 },
+          { color: "#3b82f6", text: "Healthy", num: 70 },
+        ],
+      },
+      {
+        id: 3,
+        heading: "Firewall Status",
+        chart: "StackBarChart",
+        tooltip: "Status Overview",
+        data: [
+          { color: "#dc2626", text: "Blocked", num: 25 },
+          { color: "#16a34a", text: "Allowed", num: 90 },
+          { color: "#f59e0b", text: "Pending", num: 15 },
+          { color: "#f87171", text: "Bypassed", num: 10 },
+          { color: "#3b82f6", text: "Normal", num: 50 },
+        ],
+      },
     ],
   },
 ];
-
-export const splinedata = {
-  type:"growth",
-  data: [
-    {
-      name: "Page A",
-      num: 800,
-      pv: 2400,
-      amt: 2400,
-      color: "#FF6384", // Red
-    },
-    {
-      name: "Page B",
-      num: 3000,
-      pv: 1398,
-      amt: 2210,
-      color: "#36A2EB", // Blue
-    },
-    {
-      name: "Page C",
-      num: 2000,
-      pv: 9800,
-      amt: 2290,
-      color: "#FFCE56", // Yellow
-    },
-    {
-      name: "Page D",
-      num: 2780,
-      pv: 3908,
-      amt: 2000,
-      color: "#4BC0C0", // Teal
-    },
-    {
-      name: "Page E",
-      num: 1890,
-      pv: 4800,
-      amt: 2181,
-      color: "#9966FF", // Purple
-    },
-    {
-      name: "Page F",
-      num: 2390,
-      pv: 3800,
-      amt: 2500,
-      color: "#FF9F40", // Orange
-    },
-    {
-      name: "Page G",
-      num: 3490,
-      pv: 4300,
-      amt: 2100,
-      color: "#4D5360", // Dark Gray
-    },
-  ],
-};

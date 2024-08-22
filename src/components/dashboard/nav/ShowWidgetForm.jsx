@@ -1,23 +1,31 @@
-import  { useState } from "react";
-import { category } from "../../../constants";
+import { useState } from "react";
+import { categoryList } from "../../../constants";
 
 const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
   const [selectedCategory, setSelectedCategory] = useState(
-    category[0]?.name || ""
+    categoryList[0]?.categoryName || ""
   );
-  const [selectedWidgets, setSelectedWidgets] = useState([]);
+  const [categoryWidgetMap, setCategoryWidgetMap] = useState({});
 
-  const selectedCategoryObj = category.find(
-    (item) => item.name === selectedCategory
+  const selectedCategoryObj = categoryList.find(
+    (item) => item.categoryName === selectedCategory
   );
 
-  // Toggle the selected widget
+  // Toggle the selected widget heading for the current category
   const handleWidgetClick = (widget) => {
-    setSelectedWidgets((prev) =>
-      prev.includes(widget)
-        ? prev.filter((item) => item !== widget)
-        : [...prev, widget]
-    );
+    const widgetHeading = widget.heading;
+
+    setCategoryWidgetMap((prev) => {
+      const headings = prev[selectedCategory] || [];
+      const updatedHeadings = headings.includes(widgetHeading)
+        ? headings.filter((item) => item !== widgetHeading)
+        : [...headings, widgetHeading];
+
+      return {
+        ...prev,
+        [selectedCategory]: updatedHeadings,
+      };
+    });
   };
 
   const handleCancel = () => {
@@ -25,7 +33,8 @@ const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
   };
 
   const handleConfirmClick = () => {
-    handleConfirm(selectedWidgets);
+    console.log(categoryWidgetMap);
+    handleConfirm(categoryWidgetMap);
     setOpen(false);
   };
 
@@ -38,28 +47,27 @@ const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
       <div>
         <div className="category-select">
           <ul className="flex gap border-grey w-fit pl-1 pr-8 object-contain">
-            {category.map((item, key) => (
+            {categoryList.map((item, key) => (
               <li
                 key={key}
-                onClick={() => setSelectedCategory(item.name)}
-                className={`px-4 border-b-2 pt-1 pb-1 cursor-pointer ${
-                  selectedCategory === item.name
+                onClick={() => setSelectedCategory(item.categoryName)}
+                className={`sm:px-4 px-2 border-b-2 pt-1 pb-1 cursor-pointer md:text-md text-sm whitespace-nowrap ${
+                  selectedCategory === item.categoryName
                     ? "border-blue-700 text-blue-700 font-bold"
                     : "border-grey"
                 }`}
               >
-                {item.name}
+                {item.categoryName}
               </li>
             ))}
           </ul>
         </div>
-        {/*  */}
         <div className="widget-choose mt-2 pl-4 flex flex-col w-full gap-2 overflow-y-auto h-[75vh]">
-          {selectedCategoryObj?.content.map((widget, index) => (
+          {selectedCategoryObj?.widget.map((widget, index) => (
             <div
               key={index}
               className={`py-1 border items-center flex gap-2 px-2 rounded-md cursor-pointer ${
-                selectedWidgets.includes(widget)
+                (categoryWidgetMap[selectedCategory] || []).includes(widget.heading)
                   ? "border-blue-700 text-blue-700"
                   : "border-grey"
               }`}
@@ -67,11 +75,11 @@ const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
             >
               <input
                 type="checkbox"
-                checked={selectedWidgets.includes(widget)}
+                checked={(categoryWidgetMap[selectedCategory] || []).includes(widget.heading)}
                 readOnly
                 className="form-checkbox"
               />
-              <p>{widget}</p>
+              <p>{widget.heading}</p>
             </div>
           ))}
         </div>

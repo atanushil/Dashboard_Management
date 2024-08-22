@@ -11,8 +11,7 @@ import {
 
 const CustomTooltip = ({ active, payload, label, type }) => {
   if (active && payload && payload.length) {
-    const { color } = payload[0];
-    const Type = type.toUpperCase();
+    const { color, value, text } = payload[0];
     return (
       <div
         className="custom-tooltip"
@@ -20,20 +19,20 @@ const CustomTooltip = ({ active, payload, label, type }) => {
           padding: "10px",
           backgroundColor: "#fff",
           border: "1px solid #ddd",
+          borderRadius: "4px",
+          boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
         }}
       >
         <p className="label" style={{ margin: 0 }}>
-          {label} : <span style={{ color }}>{payload[0].value}</span>
-          <span> ({ Type}) </span>
+          {label}: <span style={{ color }}>{value}</span>
+          <span> ({type}) </span>
         </p>
       </div>
     );
   }
-
   return null;
 };
 
-// Main Chart Component
 const CustomSplineChart = ({ data = [], heading, type }) => {
   return (
     <div
@@ -46,17 +45,13 @@ const CustomSplineChart = ({ data = [], heading, type }) => {
         </p>
       </div>
 
-      <ResponsiveContainer
-        width="100%"
-        height={180}
-        style={{ display: "flex" }}
-      >
+      <ResponsiveContainer width="100%" height={180}>
         <LineChart
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="text" /> 
           <YAxis type="number" dataKey="num" />
           <Tooltip content={<CustomTooltip type={type} />} />
           <Line
@@ -69,7 +64,7 @@ const CustomSplineChart = ({ data = [], heading, type }) => {
                 cx={cx}
                 cy={cy}
                 r={3}
-                fill={payload.color}
+                fill={payload.color || "#8884d8"}
                 stroke="none"
               />
             )}
