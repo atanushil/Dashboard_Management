@@ -1,37 +1,43 @@
-import {CustomPieChart} from "../../../utils";
+import { ChartData, splinedata } from "../../../constants"
+import { AddWidget, CustomPieChart, CustomSplineChart, CustomStackBarChart } from "../../../utils"
 
-const Widget = ({ heading, text }) => {
+const Widget = () => {
   return (
-    <div className="grid md:grid-cols-7 md:grid-rows-5 grid-cols-3 grid-rows-7 gap-1 widget ">
-
-      {/* Heading */}
-      <div className="md:col-span-7 col-span-3 flex-center md:justify-start">
-        <p className="md:whitespace-nowrap truncate px-1">{heading}</p>
-      </div>
-
-      <div className="md:col-span-3 md:row-span-4 row-start-2 col-span-3 row-span-3 flex-center mb-8 caret-transparent">
-        <CustomPieChart data={[text]} />  
-      </div>
-
-      <div className="md:col-span-4 md:row-span-4 md:col-start-4 md:row-start-2 col-span-3 row-span-3 row-start-5 bg-inherit ">
-        <ul className="flex-wrap md:flex-nowrap md:flex-col md:gap-1 flex-center h-full caret-transparent">
-          {text.content.map((item, i) => (
-            <li
-              key={i}
-              className="flex items-center space-x-2 px-2 py-1 md:w-full w-fit"
-            >
-              <div
-                className="w-2 h-2"
-                style={{ backgroundColor: item.color, borderRadius: "50%" }}
-              ></div>
-              <span className="text-gray-800">{item.text}</span>
-              <span style={{ color: item.color }}>({item.num})</span>
-            </li>
+    <div>
+       <div className="px-3 pl-6 mb-4">
+        <p className="py-1 text-black text-lg font-light">Category name</p>
+        <div className="flex justify-between w-full overflow-x-auto custom-scrollbar py-2 gap-3 md:gap-2 items-center">
+          {ChartData.map((item, i) => (
+            <>
+              <CustomPieChart data={[item]} heading={item.heading} key={i} />
+            </>
           ))}
-        </ul>
+          <AddWidget />
+        </div>
+      </div>
+      <div className="px-3 pl-6 mb-4">
+        <p className="py-1 text-black text-lg font-light">Category name</p>
+        <div className="flex justify-between w-full overflow-x-auto custom-scrollbar py-2 gap-3 md:gap-2 items-center">
+          <CustomSplineChart
+            data={splinedata}
+            heading={"A demo of synchronized AreaCharts"}
+          />
+          <AddWidget />
+        </div>
+      </div>
+      <div className="px-3 pl-6 mb-4">
+        <p className="py-1 text-black text-lg font-light">Category name</p>
+        <div className="flex justify-between w-full overflow-x-auto custom-scrollbar py-2 gap-3 md:gap-2 items-center">
+          {ChartData.map((item, i) => (
+            <>
+              <CustomStackBarChart text={item} key={i} />
+            </>
+          ))}
+          <AddWidget />
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Widget;
+export default Widget

@@ -175,7 +175,7 @@ export const category = [
   },
 ];
 
-export const PiechartData = [
+export const ChartData = [
   {
     heading: "Cloud Account 1",
     content: [
@@ -196,12 +196,48 @@ export const PiechartData = [
     ],
   },
 ];
-export const splineData = [
-  { x: new Date(2024, 7, 14), y: 1200 }, // Monday, August 14, 2024
-  { x: new Date(2024, 7, 15), y: 1500 }, // Tuesday, August 15, 2024
-  { x: new Date(2024, 7, 16), y: 1800 }, // Wednesday, August 16, 2024
-  { x: new Date(2024, 7, 17), y: 1100 }, // Thursday, August 17, 2024
-  { x: new Date(2024, 7, 18), y: 2000 }, // Friday, August 18, 2024
-  { x: new Date(2024, 7, 19), y: 1700 }, // Saturday, August 19, 2024
-  { x: new Date(2024, 7, 20), y: 2200 }, // Sunday, August 20, 2024
+
+export const splinedata = [
+  {
+    name: "Page A",
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: "Page B",
+    uv: 3000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: "Page C",
+    uv: 2000,
+    pv: 9800,
+    amt: 2290,
+  },
+  {
+    name: "Page D",
+    uv: 2780,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: "Page E",
+    uv: 1890,
+    pv: 4800,
+    amt: 2181,
+  },
+  {
+    name: "Page F",
+    uv: 2390,
+    pv: 3800,
+    amt: 2500,
+  },
+  {
+    name: "Page G",
+    uv: 3490,
+    pv: 4300,
+    amt: 2100,
+  },
 ];
