@@ -10,7 +10,7 @@ import {
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function MenuItems({ options, onSelect }) {
-  const [selected, setSelected] = useState(options[3]);
+  const [selected, setSelected] = useState(options[1]);
 
   const handleSelectOption = (option) => {
     setSelected(option);
@@ -23,7 +23,7 @@ export default function MenuItems({ options, onSelect }) {
     <Listbox value={selected} onChange={handleSelectOption}>
       <div className="relative w-full">
         <ListboxButton className=" w-full justify-between  flex items-center">
-          <span className="   truncate w-full">{selected.name}</span>
+          <span className="   truncate-start w-16  sm:w-full">{selected.name}</span>
           <span className="  h-full">
             <ChevronDownIcon
               aria-hidden="true"
@@ -42,7 +42,7 @@ export default function MenuItems({ options, onSelect }) {
               value={item}
               className="group  flex justify-between cursor-default select-none py-2  text-gray-900 data-[focus]:bg-indigo-600 data-[focus]:text-white"
             >
-              <span className="pl-2  block truncate font-normal group-data-[selected]:font-semibold ">
+              <span className="sm:pl-2  block truncate-start  font-normal group-data-[selected]:font-semibold ">
                 {item.name}
               </span>
               <span className="   inset-y-0 flex items-center px-1 text-indigo-600 group-data-[focus]:text-white [.group:not([data-selected])_&]:hidden">

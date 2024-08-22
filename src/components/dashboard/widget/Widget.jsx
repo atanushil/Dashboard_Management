@@ -31,7 +31,7 @@ const Widget = () => {
         <div className="flex justify-between w-full overflow-x-auto custom-scrollbar py-2 gap-3 md:gap-2 items-center">
           {ChartData.map((item, i) => (
             <>
-              <CustomStackBarChart text={item} key={i} />
+              <CustomStackBarChart data={item} heading={item.heading} key={i} />
             </>
           ))}
           <AddWidget />

@@ -8,8 +8,8 @@ const History = () => {
     alert(selected)
   }
   return (
-    <div className="flex items-center border sm:w-44 w-34 px-1 border-violet-300 hover:border-violet-600 rounded-md hover:text-violet-600 text-violet-300 ">
-      <div className="">
+    <div className="flex items-center border sm:w-44 w-24 px-1 border-violet-300 hover:border-violet-600 rounded-md hover:text-violet-600 text-violet-300 ">
+      <div className="sm:block hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

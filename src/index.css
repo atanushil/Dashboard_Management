@@ -6,6 +6,14 @@
 
 
 
+.truncate-start {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
+  text-align: left;
+}
 
 
 .sky-gradient-10 {

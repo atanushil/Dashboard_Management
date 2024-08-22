@@ -4,7 +4,7 @@ const Refreshbtn = () => {
   };
   return (
     <button
-      className="flex items-center gap-2  border px-2 py-2 rounded-md  sky-gradient-10 border-zinc   text-grey  hover:bg-sky-400 hover:text-slate-600 cursor-pointer whitespace-nowrap"
+      className="flex items-center gap-2  border p-2 rounded-md  sky-gradient-10 border-zinc   text-grey  hover:bg-sky-400 hover:text-slate-600 cursor-pointer whitespace-nowrap"
       onClick={handelRefresh}
     >
       <svg
@@ -13,7 +13,7 @@ const Refreshbtn = () => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="sm:size-5 size-4 rotate-90"
+        className="sm:size-6 size-4 rotate-90"
       >
         <path
           strokeLinecap="round"
