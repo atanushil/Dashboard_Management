@@ -194,6 +194,7 @@ export const categoryList = [
           { color: "#f59e0b", text: "Minor", num: 50 },
           { color: "#f87171", text: "Trivial", num: 15 },
           { color: "#3b82f6", text: "No Issue", num: 45 },
+          
         ],
       },
       {

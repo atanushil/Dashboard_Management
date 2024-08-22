@@ -62,7 +62,7 @@ const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
             ))}
           </ul>
         </div>
-        <div className="widget-choose mt-2 pl-4 flex flex-col w-full gap-2 overflow-y-auto h-[75vh]">
+        <div className="widget-choose mt-2 pl-4 flex flex-col w-full gap-2 overflow-y-auto h-full justify-evenly">
           {selectedCategoryObj?.widget.map((widget, index) => (
             <div
               key={index}
