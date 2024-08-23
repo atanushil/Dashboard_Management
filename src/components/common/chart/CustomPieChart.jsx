@@ -70,7 +70,7 @@ export default function CustomPieChart({ data, heading }) {
       </div>
       <div className="md:col-span-3 md:row-span-4 row-start-2 col-span-3 row-span-3 flex-center mb-8 caret-transparent h-full">
         <div className="relative flex flex-col items-center justify-center h-full w-full gap-2">
-          <div className="-top-5 md:-top-7 relative">
+          <div className="-top-2 md:-top-7 relative">
             <PieChart width={200} height={200}>
               <Pie
                 data={pieData}
@@ -86,7 +86,7 @@ export default function CustomPieChart({ data, heading }) {
               />
             </PieChart>
           </div>
-          <div className="absolute bottom-0  md:w-full mb-2 text-center">
+          <div className="absolute md:bottom-0 md:left-0 text-center left-6  md:w-full md:mb-2 mb-0 bottom-0">
             <p>
               Total{" "}
               <span className="text-grey hover:text-slate-600">{total}</span>

@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const CustomTooltip = ({ active, payload, label, type }) => {
+const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     const { color, value, text } = payload[0];
     return (
@@ -25,7 +25,6 @@ const CustomTooltip = ({ active, payload, label, type }) => {
       >
         <p className="label" style={{ margin: 0 }}>
           {label}: <span style={{ color }}>{value}</span>
-          <span> ({type}) </span>
         </p>
       </div>
     );

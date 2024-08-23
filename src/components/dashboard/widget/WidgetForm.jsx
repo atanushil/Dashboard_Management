@@ -57,7 +57,7 @@ const WidgetForm = ({ category, open, setOpen }) => {
   return (
     <div>
       <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
-        <DialogBackdrop className="fixed inset-0 bg-gray-600 bg-opacity-75 transition-opacity" />
+        <DialogBackdrop className="fixed inset-0 bg-gray-700 bg-opacity-75 transition-opacity" />
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex min-h-full items-center w-full justify-center p-4 text-center sm:items-center sm:p-0">
             <DialogPanel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
@@ -80,7 +80,7 @@ const WidgetForm = ({ category, open, setOpen }) => {
                           type="text"
                           name="widgetName"
                           id="widgetName"
-                          className="bg-inherit border-grey px-2 border rounded-lg"
+                          className="bg-inherit border-grey bg-slate-100 px-2 border rounded-lg"
                           value={widgetName}
                           onChange={(e) => setWidgetName(e.target.value)}
                           required
@@ -92,7 +92,7 @@ const WidgetForm = ({ category, open, setOpen }) => {
                           required
                           name="chartType"
                           id="chartType"
-                          className="w-fit border-2 border-grey rounded-md px-2"
+                          className="w-fit border border-slate-400 bg-slate-200 rounded-md px-2"
                           value={chartType}
                           onChange={(e) => setChartType(e.target.value)}
                         >
@@ -105,21 +105,21 @@ const WidgetForm = ({ category, open, setOpen }) => {
                       <div className="widget-data">
                         <div className="data-label">
                           <p className="flex w-full gap-2">
-                            <span className="bg-grey rounded-full flex-center w-24">Color</span>
-                            <span className="w-2/3 bg-green-500 flex-center rounded-sm">Text</span>
-                            <span className="w-1/3 bg-green-500 flex-center rounded-sm">Value</span>
+                            <span className="gradient-multi-color text-black opacity-50 rounded-full flex-center w-24">Color</span>
+                            <span className="w-2/3 bg-green-200 hover:bg-green-400 flex-center rounded-sm">Text</span>
+                            <span className="w-1/3 bg-green-200 hover:bg-green-400 flex-center rounded-sm">Value</span>
                           </p>
                         </div>
                         {textInputs.map(
                           (input, index) =>
                             input.visible && (
                               <div className="text-input flex w-full gap-2 my-1 items-center" key={index}>
-                                <span className="w-24 h-6 rounded-full" style={{ backgroundColor: input.color }} />
+                                <span className="w-24 h-6 rounded-full caret-transparent" style={{ backgroundColor: input.color }} />
                                 <input
                                   type="text"
                                   value={input.text}
                                   required
-                                  className="w-2/3 bg-grey rounded-sm flex-center px-2"
+                                  className="w-2/3 bg-slate-200 rounded-sm flex-center px-2"
                                   onChange={(e) => handleInputChange(input.id, "text", e.target.value)}
                                 />
                                 <div className="w-1/3 flex-center">
@@ -127,7 +127,7 @@ const WidgetForm = ({ category, open, setOpen }) => {
                                     type="number"
                                     value={input.value}
                                     required
-                                    className="w-2/3 bg-grey rounded-sm pl-3 relative"
+                                    className="w-2/3 bg-slate-200 rounded-sm pl-3 relative"
                                     onChange={(e) => handleInputChange(input.id, "value", e.target.value)}
                                   />
                                   {index >= 0 && (
@@ -158,14 +158,14 @@ const WidgetForm = ({ category, open, setOpen }) => {
                         )}
                         {visibleCount < colorArray.length && (
                           <div
-                            className="w-full bg-slate-500 mt-2 flex-center rounded-lg text-white cursor-pointer caret-transparent"
+                            className="w-full bg-slate-500 opacity-50 hover:opacity-100 mt-2 flex-center rounded-lg text-white cursor-pointer caret-transparent"
                             onClick={handleAddText}
                           >
                             Add Text
                           </div>
                         )}
                       </div>
-                      <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                      <div className="bg-gray-50  py-4 sm:flex sm:flex-row-reverse ">
                         <button
                           type="submit"
                           className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto"

@@ -23,7 +23,6 @@ const Widget = () => {
           <CustomSplineChart
             key={widget.id}
             data={widget.data}
-            type={widget.tooltip}
             heading={widget.heading}
           />
         );
