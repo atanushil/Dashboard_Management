@@ -69,18 +69,18 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Search widget..."
-          className="ml-2 w-full border-none outline-none text-gray-700 placeholder:text-balance placeholder-gray-500 bg-inherit"
+          className="ml-2 w-full border-none outline-none text-gray-700 placeholder:text-balance truncate-start placeholder-gray-500 bg-inherit"
           value={query}
           onChange={handleInputChange}
         />
       </div>
 
       {filteredSuggestions.length > 0 && (
-        <ul className="absolute z-10 h-60 overflow-y-auto w-full bg-white border border-border_color rounded-lg shadow-md">
+        <ul className="absolute z-10 mt-1 h-60 overflow-y-auto md:w-full w-[50vw]  bg-white border border-border_color rounded-lg shadow-md">
           {filteredSuggestions.map((suggestion, index) => (
             <li
               key={index}
-              className="p-2 cursor-pointer hover:bg-gray-200"
+              className="p-2 cursor-pointer hover:bg-gray-200 w-full truncate"
               onClick={() => handleSuggestionClick(suggestion)}
             >
               {suggestion}
