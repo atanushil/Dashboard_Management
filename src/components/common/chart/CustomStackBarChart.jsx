@@ -1,13 +1,21 @@
 import React from 'react';
 
-const CustomStackBarChart = ({ data, heading }) => {
+const CustomStackBarChart = ({ data, heading,BoxClass,categoryName }) => {
   // Calculate the total value from data
   const total = data.reduce((sum, item) => sum + item.num, 0);
 
   let accumulatedWidth = 0; // To track cumulative width of segments
 
+  const handelClick = () => {
+    const url = `/widget/${heading}`;
+
+    console.log(categoryName);
+    console.log(heading);
+    console.log(data);
+    console.log(url);
+  };
   return (
-    <div className="grid grid-cols-1 grid-rows-5 gap-1 widget">
+    <div className={`grid grid-cols-1 grid-rows-5 gap-1  ${BoxClass} `} onClick={handelClick}>
       {/* Heading */}
       <div className="md:justify-start flex-center flex py-2">
         <p className="md:whitespace-nowrap truncate px-1">{heading}</p>

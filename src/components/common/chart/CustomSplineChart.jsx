@@ -32,11 +32,26 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-const CustomSplineChart = ({ data = [], heading, type,BoxClass }) => {
+const CustomSplineChart = ({
+  data = [],
+  heading,
+  type,
+  BoxClass,
+  categoryName,
+}) => {
+  const handelClick = () => {
+    const url = `/widget/${heading}`;
+
+    console.log(categoryName);
+    console.log(heading);
+    console.log(data);
+    console.log(url);
+  };
   return (
     <div
       className={`  ${BoxClass} flex flex-col justify-evenly gap-1`}
       style={{ width: "100%" }}
+      onClick={handelClick}
     >
       <div className="py-2 flex-center md:justify-start px-1">
         <p className="md:justify-start flex w-fit items-center text-black justify-center">
@@ -50,7 +65,7 @@ const CustomSplineChart = ({ data = [], heading, type,BoxClass }) => {
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="text" /> 
+          <XAxis dataKey="text" />
           <YAxis type="number" dataKey="num" />
           <Tooltip content={<CustomTooltip type={type} />} />
           <Line

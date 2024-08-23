@@ -28,7 +28,8 @@ import Footer from "../components/common/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import WidgetDashborad from "../components/common/WidgetDashborad";
+ 
+
 const RedirectToPrevious = () => {
   const navigate = useNavigate();
 
@@ -53,6 +54,7 @@ import linkedinBW from "/assets/linkedinBW.png";
 import mail from "/assets/sending-mail.gif";
 import twitter from "/assets/twitter.png";
 import twitterBW from "/assets/twitterBW.png";
+import WidgetDashboard from "../components/common/WidgetDashboard";
 export {
   location,
   discord,
@@ -89,5 +91,5 @@ export {
   CustomSplineChart,
   CustomStackBarChart,
   WidgetForm,
-  WidgetDashborad
+WidgetDashboard
 };
