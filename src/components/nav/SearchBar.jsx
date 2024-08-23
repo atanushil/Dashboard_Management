@@ -1,8 +1,7 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { categoryList } from "../../constants";
 
 const SearchBar = () => {
-  // Memoize the suggestions array to avoid recalculating it on every render
   const suggestions = useMemo(
     () =>
       categoryList.flatMap((category) =>
@@ -13,6 +12,7 @@ const SearchBar = () => {
 
   const [query, setQuery] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+  const searchBarRef = useRef(null);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -35,8 +35,21 @@ const SearchBar = () => {
     console.log("Selected suggestion:", suggestion); // Optionally handle the selection
   };
 
+  const handleClickOutside = (event) => {
+    if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
+      setFilteredSuggestions([]); // Hide the suggestions list
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="relative w-4/5">
+    <div ref={searchBarRef} className="relative w-4/5">
       <div className="flex items-center p-1.5 border border-border_color rounded-lg shadow-sm bg-gray">
         <svg
           xmlns="http://www.w3.org/2000/svg"

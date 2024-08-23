@@ -23,7 +23,7 @@ export default function MenuItems({ options, onSelect }) {
     <Listbox value={selected} onChange={handleSelectOption}>
       <div className="relative w-full">
         <ListboxButton className=" w-full justify-between  flex items-center">
-          <span className="   truncate-start w-16  sm:w-full">{selected.name}</span>
+          <span className="   truncate-start w-16 px-2  sm:w-full">{selected.name}</span>
           <span className="  h-full">
             <ChevronDownIcon
               aria-hidden="true"

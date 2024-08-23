@@ -4,7 +4,7 @@ import { DashNav, Widget, WidgetDashboard } from "../../utils";
 const Dashboard = () => {
   return (
     <div className="z-0 w-full px-4">
-      {/* <DashNav name="CNAPP Dashboard" /> */}
+      <DashNav name="CNAPP Dashboard" />
       <Widget/>
       {/* {categoryList.map((cat, i) => (
         <>
