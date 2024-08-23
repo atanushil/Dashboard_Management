@@ -1,7 +1,16 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { categoryList } from "../../constants";
 
 const SearchBar = () => {
-  const suggestions = ["word", "apple", "orange", "banana", "grape", "watermelon", "widget one", "widget two"];
+  // Memoize the suggestions array to avoid recalculating it on every render
+  const suggestions = useMemo(
+    () =>
+      categoryList.flatMap((category) =>
+        category.widget.map((widget) => widget.heading)
+      ),
+    []
+  );
+
   const [query, setQuery] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
 
@@ -9,20 +18,21 @@ const SearchBar = () => {
     const value = e.target.value;
     setQuery(value);
 
-    if (value) {
-      const filtered = suggestions.filter((suggestion) =>
-        suggestion.toLowerCase().includes(value.toLowerCase())
+    if (value.trim()) {
+      setFilteredSuggestions(
+        suggestions.filter((suggestion) =>
+          suggestion.toLowerCase().includes(value.toLowerCase())
+        )
       );
-      setFilteredSuggestions(filtered);
     } else {
       setFilteredSuggestions([]);
     }
   };
 
   const handleSuggestionClick = (suggestion) => {
-    console.log("Selected suggestion:", suggestion); // Print the selected suggestion to the console
     setQuery(suggestion);
     setFilteredSuggestions([]);
+    console.log("Selected suggestion:", suggestion); // Optionally handle the selection
   };
 
   return (
@@ -52,8 +62,8 @@ const SearchBar = () => {
         />
       </div>
 
-      {query && filteredSuggestions.length > 0 && (
-        <ul className="absolute z-10 mt-2 w-full bg-white border border-border_color rounded-lg shadow-md">
+      {filteredSuggestions.length > 0 && (
+        <ul className="absolute z-10 h-60 overflow-y-auto w-full bg-white border border-border_color rounded-lg shadow-md">
           {filteredSuggestions.map((suggestion, index) => (
             <li
               key={index}
