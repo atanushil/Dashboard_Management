@@ -17,17 +17,18 @@ import History from "../components/dashboard/nav/History";
 import MenuBtn from "../components/dashboard/nav/MenuBtn";
 import PersonalizeDashboard from "../components/dashboard/nav/PersonalizeDashboard";
 import Refreshbtn from "../components/dashboard/nav/Refreshbtn";
-import ShowWidgetForm from "../components/dashboard/nav/ShowWidgetForm";
+import DisplayWidgetForm from "../components/dashboard/nav/DisplayWidgetForm";
 
 import AddWidget from "../components/dashboard/widget/AddWidget";
 import Widget from "../components/dashboard/widget/Widget";
+import WidgetForm from "../components/dashboard/widget/WidgetForm";
 
 import CustomStackBarChart from "../components/common/chart/CustomStackBarChart";
 import Footer from "../components/common/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-
+import WidgetDashborad from "../components/common/WidgetDashborad";
 const RedirectToPrevious = () => {
   const navigate = useNavigate();
 
@@ -78,7 +79,7 @@ export {
   MenuBtn,
   PersonalizeDashboard,
   Refreshbtn,
-  ShowWidgetForm,
+  DisplayWidgetForm,
   AddWidget,
   Widget,
   Notification,
@@ -86,5 +87,7 @@ export {
   SearchBar,
   Footer,
   CustomSplineChart,
-  CustomStackBarChart
+  CustomStackBarChart,
+  WidgetForm,
+  WidgetDashborad
 };

@@ -1,4 +1,4 @@
-import { categoryList } from "../../../constants";
+import { categoryList, SmallSizePie } from "../../../constants";
 import {
   AddWidget,
   CustomPieChart,
@@ -13,6 +13,8 @@ const Widget = () => {
       case "PieChart":
         return (
           <CustomPieChart
+            PieSize={SmallSizePie}
+            BoxClass={"widget"}
             key={widget.id}
             data={widget.data}
             heading={widget.heading}
@@ -21,6 +23,7 @@ const Widget = () => {
       case "SplineChart":
         return (
           <CustomSplineChart
+          BoxClass={"widget"}
             key={widget.id}
             data={widget.data}
             heading={widget.heading}

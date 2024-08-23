@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { categoryList } from "../../../constants";
 
-const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
+const DisplayWidgetForm = ({ setOpen, handleConfirm }) => {
   const [selectedCategory, setSelectedCategory] = useState(
     categoryList[0]?.categoryName || ""
   );
@@ -103,4 +103,4 @@ const ShowWidgetForm = ({ setOpen, handleConfirm }) => {
   );
 };
 
-export default ShowWidgetForm;
+export default DisplayWidgetForm;

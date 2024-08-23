@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import { RightSlider, ShowWidgetForm } from "../../../utils";
+import { DisplayWidgetForm, RightSlider } from "../../../utils";
 
 const PersonalizeDashboard = () => {
   const [open, setOpen] = useState(false);
@@ -40,7 +40,7 @@ const PersonalizeDashboard = () => {
         heading="Personalize dashboard"
         content={
           <>
-            <ShowWidgetForm setOpen={setOpen} handleConfirm={handleConfirm} />
+            <DisplayWidgetForm setOpen={setOpen} handleConfirm={handleConfirm} />
           </>
         }
         open={open}

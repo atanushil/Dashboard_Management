@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { colorArray } from "../../../constants";
 
-const WidgetForm = ({ category, open, setOpen }) => {
+const WidgetForm = ({ category, open, setOpen ,isRightSlider,setIsRightSlider}) => {
   const [widgetName, setWidgetName] = useState(""); // State for widget name
   const [chartType, setChartType] = useState("default"); // State for chart type
   const [textInputs, setTextInputs] = useState(
@@ -41,7 +41,9 @@ const WidgetForm = ({ category, open, setOpen }) => {
     setTextInputs(newInputs);
     setVisibleCount(visibleCount - 1);
   };
-
+  const handelCancel=()=>{
+    setOpen(false);
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -52,6 +54,9 @@ const WidgetForm = ({ category, open, setOpen }) => {
     console.log(formData);
     setSubmittedData(formData);
     setOpen(false);
+    if(!isRightSlider){
+      setIsRightSlider(true);
+    }
   };
 
   return (
@@ -174,7 +179,7 @@ const WidgetForm = ({ category, open, setOpen }) => {
                         </button>
                         <button
                           type="button"
-                          onClick={() => setOpen(false)}
+                          onClick={handelCancel}
                           className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
                         >
                           Cancel

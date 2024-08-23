@@ -32,19 +32,19 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-const CustomSplineChart = ({ data = [], heading, type }) => {
+const CustomSplineChart = ({ data = [], heading, type,BoxClass }) => {
   return (
     <div
-      className="widget flex flex-col justify-evenly gap-1"
+      className={`  ${BoxClass} flex flex-col justify-evenly gap-1`}
       style={{ width: "100%" }}
     >
       <div className="py-2 flex-center md:justify-start px-1">
-        <p className="md:justify-start flex w-fit items-center justify-center">
+        <p className="md:justify-start flex w-fit items-center text-black justify-center">
           {heading}
         </p>
       </div>
 
-      <ResponsiveContainer width="100%" height={180}>
+      <ResponsiveContainer width="100%" height={"100%"}>
         <LineChart
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

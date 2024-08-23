@@ -237,3 +237,8 @@ export const categoryList = [
     ],
   },
 ];
+
+
+export const SmallSizePie={width:200,height:200,CX:100,CY:100,innerRadius:50,outerRadius:60}
+
+export const BigSizePie={width:400,height:400,CX:200,CY:200,innerRadius:100,outerRadius:120}
