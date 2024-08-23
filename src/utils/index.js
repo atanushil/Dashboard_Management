@@ -27,6 +27,7 @@ import Footer from "../components/common/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const RedirectToPrevious = () => {
   const navigate = useNavigate();
 

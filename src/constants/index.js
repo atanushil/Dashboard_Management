@@ -43,6 +43,17 @@ export const DaysOptions = [
   },
 ];
 
+export const colorArray = [
+  '#3498db',  // Blue
+  '#2ecc71',  // Green
+  '#e74c3c',  // Red
+  '#ecf0f1',  // Light Gray
+  '#2c3e50',  // Dark Blue-Grey
+  '#f39c12',  // Orange
+  '#27ae60',  // Dark Green
+  '#8e44ad'   // Purple
+];
+
 export const categoryList = [
   {
     id: 1,

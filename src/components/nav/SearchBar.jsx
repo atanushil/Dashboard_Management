@@ -20,7 +20,7 @@ const SearchBar = () => {
 
       <input
         type="text"
-        placeholder="Search anything..."
+        placeholder="Search widget..."
         className="ml-2 w-full border-none outline-none text-gray-700 placeholder:text-balance placeholder-gray-500 bg-inherit  "
       />
     </div>

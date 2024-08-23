@@ -45,14 +45,13 @@ const Widget = () => {
       <div className="px-3 pl-6 mb-4">
         {categoryList.map((cat) => (
           <div key={cat.id}>
-            <p className="py-1 text-black text-lg font-light">{cat.categoryName} Dashboard</p>
+            <p className="py-1 text-black text-lg font-light">
+              {cat.categoryName} Dashboard
+            </p>
 
             <ul className="flex justify-between w-full overflow-x-auto custom-scrollbar py-2 gap-3 md:gap-2 items-center">
-              {cat.widget.map((widget) => (
-
-                  renderChart(widget)
-
-              ))}
+              {cat.widget.map((widget) => renderChart(widget))}
+              <AddWidget />
             </ul>
           </div>
         ))}
