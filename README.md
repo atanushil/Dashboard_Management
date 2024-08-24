@@ -1,169 +1,111 @@
-### Updated Roadmap for Vite + React with Redux
-
-#### **1. Initial Setup**
-- **Create Vite Project**:
-  - Run the following command to set up a new Vite project with React:
-    ```bash
-    npm create vite@latest my-dashboard
-    cd my-dashboard
-    npm install
-    ```
-  
-- **Install Dependencies**:
-  - Install Redux and React-Redux:
-    ```bash
-    npm install @reduxjs/toolkit react-redux
-    ```
-  - Optionally, install `redux-thunk` for asynchronous actions if needed.
-
-#### **2. JSON Structure Design**
-- **Categories JSON**: (Same as before)
-  ```json
-  {
-    "categories": [
-      {
-        "id": "cspm",
-        "name": "CSPM Executive Dashboard",
-        "widgets": [
-          {
-            "id": "w1",
-            "name": "Widget 1",
-            "content": "Random text for widget 1"
-          },
-          {
-            "id": "w2",
-            "name": "Widget 2",
-            "content": "Random text for widget 2"
-          }
-        ]
-      },
-      {
-        "id": "security",
-        "name": "Security Overview",
-        "widgets": []
-      }
-    ]
-  }
-  ```
-
-#### **3. Application Layout**
-- **App Structure**:
-  - Similar to the previous plan, optimized for React and Vite.
-  
-- **Components**:
-  - `CategoryList`: Lists categories.
-  - `WidgetList`: Displays widgets for a selected category.
-  - `Widget`: Individual widget component.
-  - `AddWidgetForm`: Form to add a widget.
-  - `SearchBar`: To search widgets.
-
-#### **4. State Management with Redux**
-- **Redux Store Setup**:
-  - Create a Redux store with slices for categories and widgets.
-  - Use `@reduxjs/toolkit` to create slices and actions.
-
-  **Example Redux Setup**:
-  ```javascript
-  import { configureStore, createSlice } from '@reduxjs/toolkit';
-
-  const initialState = {
-    categories: []
-  };
-
-  const categoriesSlice = createSlice({
-    name: 'categories',
-    initialState,
-    reducers: {
-      addCategory: (state, action) => {
-        state.categories.push(action.payload);
-      },
-      addWidget: (state, action) => {
-        const { categoryId, widget } = action.payload;
-        const category = state.categories.find(cat => cat.id === categoryId);
-        if (category) {
-          category.widgets.push(widget);
-        }
-      },
-      removeWidget: (state, action) => {
-        const { categoryId, widgetId } = action.payload;
-        const category = state.categories.find(cat => cat.id === categoryId);
-        if (category) {
-          category.widgets = category.widgets.filter(widget => widget.id !== widgetId);
-        }
-      },
-      searchWidgets: (state, action) => {
-        const query = action.payload;
-        return {
-          ...state,
-          filteredWidgets: state.categories.flatMap(category => 
-            category.widgets.filter(widget => widget.name.includes(query))
-          )
-        };
-      }
-    }
-  });
-
-  export const { addCategory, addWidget, removeWidget, searchWidgets } = categoriesSlice.actions;
-
-  const store = configureStore({
-    reducer: {
-      categories: categoriesSlice.reducer
-    }
-  });
-
-  export default store;
-  ```
-
-#### **5. Dynamic Widget Management**
-- **Add Widget**:
-  - Use a modal to add a new widget.
-  - Dispatch the `addWidget` action to add it to the relevant category.
-
-- **Remove Widget**:
-  - Use the `removeWidget` action to remove a widget from a category.
-
-#### **6. Search Functionality**
-- **Search Implementation**:
-  - Use the `searchWidgets` action to filter widgets across categories based on user input.
-
-#### **7. Testing**
-- **Test Components**: 
-  - Use Jest and React Testing Library for unit tests.
-- **Redux Testing**: Test Redux slices and actions independently.
-
-#### **8. Documentation**
-- **README.md**:
-  - Instructions on setting up the project, running it, and running tests.
-
-#### **9. Deployment (Optional)**
-- **Host the Application**: Use services like Vercel or Netlify for deployment.
-
-#### **10. Code Submission**
-- **GitHub Repository**: Create a public/private repository on GitHub and push your code.
-- **Zip File**: Alternatively, package the project in a zip file and share it.
 
 ---
 
-### Steps to Locally Run the Application
+# [Dashboard Management](https://accuknox-assignment-tau.vercel.app/)
+
+Welcome to the Widget Dashboard Website! This website allows users to manage and personalize a dashboard with various widgets, each displaying different types of charts. The site includes features for searching, adding, deleting widgets, and personalizing the dashboard. Also this website is designed to be fully responsive across various breakpoints:
+  
+**Extra Small Devices (Phones, 480px and below)**
+![Dashboard Screenshot](/public/ExtraSmall.png)
+
+The layout adapts to a single-column view with a hamburger menu for the navbar, and widgets are stacked vertically for optimal readability and easy scrolling.
+
+**Small Devices (Tablets, 481px to 768px)**
+![Dashboard Screenshot](/public/ExtraSmall.png)
+The layout adjusts to a two-column view where possible, with the navbar remaining a hamburger menu but offering more space for items, while widgets are displayed in a grid format with fewer columns to maintain clarity.
+
+**Medium Devices (Small Laptops, 769px to 1024px)**
+![Dashboard Screenshot](/public/MediumDevice.png)
+The layout switches to a three-column view, with the navbar potentially displaying more items and reducing reliance on the hamburger menu, while widgets are organized in a more compact grid.
+
+**Large Devices (Desktops, 1025px and above)**
+![Dashboard Screenshot](/public/dashboardPage.png)
+The layout utilizes the full multi-column design for maximum screen space, with the navbar fully expanded and all links visible, and widgets displayed in a flexible grid layout to effectively use the larger screen size.
+
+**Visit the [Dashboard Management](https://accuknox-assignment-tau.vercel.app/) to get more details.**
+
+## Features
+
+**Home Page**
+
+  Displays the main content and includes navigation to the dashboard.
+  
+  - **Navbar:** Contains 'Home' (active) and 'Dashboard' links.
+  - **Content:** Displays the main content of the home page.
+  - **Footer:** Always visible at the bottom.
+
+<details>
+  <summary>**Dashboard Page**</summary>
+
+  - Personalize the dashboard by selecting which widgets to display.
+  - Refresh the dashboard to update the view.
+  - View widgets organized by category.
+  - Add new widgets with various chart types.
+  - Search for widgets by name and navigate to specific widgets.
+  - Optionally delete widgets from the dashboard.
+
+</details>
+
+## Components
+
+1. **Home Page**:
+   - **Navbar**: Links to "Home" (active) and "Dashboard."
+   - **Content**: Main content of the home page.
+   - **Footer**: Contains developer details and contact information.
+
+2. **Dashboard Page**:
+   - **Navbar**: Contains links to "Home" (inactive), "Dashboard" (active), and a "SearchBar" (user can search the widget ).
+   - **Content**:
+     - **Personalize Button**: Allows users to select widgets to display.
+     - **Refresh Button**: Refreshes the dashboard view.
+     - **Category Name**: Displays the current widget category.
+     - **Category-wise Widgets**: Shows widgets organized by category.
+     - **Add Widget Dialog**:
+       - **Input**: For widget name.
+       - **Chart Selector**: Options for pie chart, spline chart, stack bar chart.
+       - **Data Input**: Optional text and value fields.
+       - **Cancel Button**: Closes the dialog without saving.
+       - **Confirm Button**: Saves the widget and updates the dashboard.
+
+3. **Widget Page**:
+   - Displays the category name, widget name, and chart view.
+
+## Getting Started
+
+To get started with the project:
+
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd my-dashboard
+   git clone https://github.com/atanushil/Accuknox_Assignment.git
    ```
 
-2. **Install Dependencies**:
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd Accuknox-Assignment
+   ```
+
+3. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-3. **Run the Application**:
+4. **Start the Development Server**:
    ```bash
    npm run dev
    ```
 
-4. **Running Tests**:
-   ```bash
-   npm test
-   ```
+5. **Open Your Browser** and go to `http://localhost:5173` to view the website.
 
-5. **Open in Browser**: Access the application at `http://localhost:5173`.
+## Usage
+
+- **Navigate** to the dashboard by clicking the "Dashboard" link in the Navbar.
+- **Personalize** your dashboard by clicking the "Personalize" button and selecting widgets.
+- **Add a Widget** by clicking the "Add Widget" button, filling out the form, and clicking "Confirm."
+- **Search** for widgets by their name using the search bar in the Navbar.
+- **View Widget Details** and manage widgets (hover to show delete icon).
+- **Delete Widgets** by clicking the delete icon that appears when hovering over a widget.
+
+---
+```
+
+This addition clarifies that users can search for widgets by their name.
