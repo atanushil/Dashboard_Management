@@ -65,11 +65,11 @@ export const categoryList = [
         chart: "PieChart",
         tooltip: "Number of Incidents",
         data: [
-          { color: "#dc2626", text: "Failed", num: 45 },
-          { color: "#16a34a", text: "Passed", num: 75 },
-          { color: "#f59e0b", text: "In Progress", num: 30 },
-          { color: "#f87171", text: "Not Available", num: 35 },
-          { color: "#3b82f6", text: "Compliant", num: 70 },
+          // { color: "#dc2626", text: "Failed", num: 45 },
+          // { color: "#16a34a", text: "Passed", num: 75 },
+          // { color: "#f59e0b", text: "In Progress", num: 30 },
+          // { color: "#f87171", text: "Not Available", num: 35 },
+          // { color: "#3b82f6", text: "Compliant", num: 70 },
         ],
       },
       {
@@ -78,11 +78,11 @@ export const categoryList = [
         chart: "SplineChart",
         tooltip: "Monthly View",
         data: [
-          { color: "#dc2626", text: "Failed", num: 40 },
-          { color: "#16a34a", text: "Passed", num: 85 },
-          { color: "#f59e0b", text: "In Progress", num: 25 },
-          { color: "#f87171", text: "Not Available", num: 45 },
-          { color: "#3b82f6", text: "Compliant", num: 65 },
+          // { color: "#dc2626", text: "Failed", num: 40 },
+          // { color: "#16a34a", text: "Passed", num: 85 },
+          // { color: "#f59e0b", text: "In Progress", num: 25 },
+          // { color: "#f87171", text: "Not Available", num: 45 },
+          // { color: "#3b82f6", text: "Compliant", num: 65 },
         ],
       },
       {
@@ -91,11 +91,11 @@ export const categoryList = [
         chart: "StackBarChart",
         tooltip: "Compliance Rate",
         data: [
-          { color: "#dc2626", text: "Failed", num: 55 },
-          { color: "#16a34a", text: "Passed", num: 70 },
-          { color: "#f59e0b", text: "In Progress", num: 20 },
-          { color: "#f87171", text: "Not Available", num: 50 },
-          { color: "#3b82f6", text: "Compliant", num: 60 },
+          // { color: "#dc2626", text: "Failed", num: 55 },
+          // { color: "#16a34a", text: "Passed", num: 70 },
+          // { color: "#f59e0b", text: "In Progress", num: 20 },
+          // { color: "#f87171", text: "Not Available", num: 50 },
+          // { color: "#3b82f6", text: "Compliant", num: 60 },
         ],
       },
     ],
@@ -242,3 +242,4 @@ export const categoryList = [
 export const SmallSizePie={width:200,height:200,CX:100,CY:100,innerRadius:50,outerRadius:60}
 
 export const BigSizePie={width:400,height:400,CX:200,CY:200,innerRadius:100,outerRadius:120}
+

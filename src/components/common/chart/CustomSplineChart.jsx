@@ -31,6 +31,8 @@ const CustomTooltip = ({ active, payload, label }) => {
   }
   return null;
 };
+import { useNavigate } from "react-router-dom";
+import NotFound from "../NotFound";
 
 const CustomSplineChart = ({
   data = [],
@@ -39,26 +41,30 @@ const CustomSplineChart = ({
   BoxClass,
   categoryName,
 }) => {
-  const handelClick = () => {
-    const url = `/widget/${heading}`;
+  const navigate = useNavigate();
 
-    console.log(categoryName);
-    console.log(heading);
-    console.log(data);
-    console.log(url);
+  const handelClick = () => {
+    const url = `/widget/${categoryName}/${heading}`;
+    navigate(url, {
+      state: {
+        specificWidget: { heading, data, chart: "SplineChart" },
+        categoryName,
+      },
+    });
   };
   return (
     <div
-      className={`  ${BoxClass} flex flex-col justify-evenly gap-1`}
+      className={`  ${BoxClass} grid grid-cols-5 grid-rows-5 gap-2`}
       style={{ width: "100%" }}
       onClick={handelClick}
     >
-      <div className="py-2 flex-center md:justify-start px-1">
-        <p className="md:justify-start flex w-fit items-center text-black justify-center">
+      <div className="col-span-5 md:justify-start flex px-3  items-center  text-black justify-center">
+        <p className="">
           {heading}
         </p>
       </div>
-
+      {data?.length ? (
+        <div className="col-span-5 row-span-4 row-start-2">
       <ResponsiveContainer width="100%" height={"100%"}>
         <LineChart
           data={data}
@@ -85,6 +91,11 @@ const CustomSplineChart = ({
           />
         </LineChart>
       </ResponsiveContainer>
+      </div>
+      ):
+      <div className="col-span-5 row-span-4 row-start-2">
+          <NotFound message="No Graph data available" color={"text-orange-500 font-bold"} />
+        </div>}
     </div>
   );
 };

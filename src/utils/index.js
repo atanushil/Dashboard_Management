@@ -27,18 +27,17 @@ import CustomStackBarChart from "../components/common/chart/CustomStackBarChart"
 import Footer from "../components/common/Footer";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import WidgetDashboard from "../components/common/WidgetDashboard";
 
- 
+ import NotFound from "../components/common/NotFound";
 
 const RedirectToPrevious = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Always navigate to Home when an undefined route is encountered
     navigate("/");
   }, [navigate]);
-
-  return null; // This component doesn't render anything
+  return null; 
 };
 
 export default RedirectToPrevious;
@@ -54,7 +53,7 @@ import linkedinBW from "/assets/linkedinBW.png";
 import mail from "/assets/sending-mail.gif";
 import twitter from "/assets/twitter.png";
 import twitterBW from "/assets/twitterBW.png";
-import WidgetDashboard from "../components/common/WidgetDashboard";
+import notFound from "/assets/notFound.png"
 export {
   location,
   discord,
@@ -67,8 +66,10 @@ export {
   mail,
   twitter,
   twitterBW,
+  notFound
 };
 export {
+  NotFound,
   NavBar,
   Home,
   Dashboard,

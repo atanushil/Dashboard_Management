@@ -1,7 +1,10 @@
 import { useState, useMemo, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { categoryList } from "../../constants";
 
 const SearchBar = () => {
+  const navigate = useNavigate();
+
   const suggestions = useMemo(
     () =>
       categoryList.flatMap((category) =>
@@ -30,23 +33,54 @@ const SearchBar = () => {
   };
 
   const handleSuggestionClick = (suggestion) => {
+    const { categoryName, widget } = getWidgetInfo(suggestion);
+    const { data, chart } = widget; // Assuming widget contains data and chart type
+
     setQuery(suggestion);
     setFilteredSuggestions([]);
-    console.log("Selected suggestion:", suggestion); // Optionally handle the selection
+
+    const url = `/widget/${categoryName}/${suggestion}`;
+    console.log(url)
+    navigate(url, {
+      state: {
+        specificWidget: { heading: suggestion, data, chart },
+        categoryName,
+      },
+    });
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && filteredSuggestions.length > 0) {
+      handleSuggestionClick(filteredSuggestions[0]);
+    }
   };
 
   const handleClickOutside = (event) => {
     if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
-      setFilteredSuggestions([]); // Hide the suggestions list
+      setFilteredSuggestions([]); 
     }
   };
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown); 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown); 
     };
-  }, []);
+  }, [filteredSuggestions]);
+
+  const getWidgetInfo = (widgetHeading) => {
+    for (const category of categoryList) {
+      const widget = category.widget.find(
+        (widget) => widget.heading === widgetHeading
+      );
+      if (widget) {
+        return { categoryName: category.categoryName, widget };
+      }
+    }
+    return { categoryName: "", widget: { data: [], chart: "" } };
+  };
 
   return (
     <div ref={searchBarRef} className="relative w-4/5">
@@ -69,14 +103,14 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Search widget..."
-          className="ml-2 w-full border-none outline-none text-gray-700 placeholder:text-balance truncate-start placeholder-gray-500 bg-inherit"
+          className="ml-2 w-full border-none outline-none  text-gray-700 placeholder:text-balance truncate placeholder-gray-500 bg-inherit"
           value={query}
           onChange={handleInputChange}
         />
       </div>
 
       {filteredSuggestions.length > 0 && (
-        <ul className="absolute z-10 mt-1 h-60 overflow-y-auto md:w-full w-[50vw]  bg-white border border-border_color rounded-lg shadow-md">
+        <ul className="absolute z-10 mt-1  right-0 h-60 overflow-y-auto md:w-full w-[50vw] bg-white border border-border_color rounded-lg shadow-md">
           {filteredSuggestions.map((suggestion, index) => (
             <li
               key={index}
