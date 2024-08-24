@@ -3,30 +3,42 @@
 
 # [Dashboard Management](https://accuknox-assignment-tau.vercel.app/)
 
-Welcome to the Widget Dashboard Website! This website allows users to manage and personalize a dashboard with various widgets, each displaying different types of charts. The site includes features for searching, adding, deleting widgets, and personalizing the dashboard. Also this website is designed to be fully responsive across various breakpoints:
-  
-**Extra Small Devices (Phones, 480px and below)**
-![Dashboard Screenshot](/public/ExtraSmall.png)
+Welcome to the Widget Dashboard Website! This website allows users to manage and personalize a dashboard with various widgets, each displaying different types of charts. The site includes features for searching, adding, deleting widgets, and personalizing the dashboard. Also, this website is designed to be fully responsive across various breakpoints:
 
-The layout adapts to a single-column view with a hamburger menu for the navbar, and widgets are stacked vertically for optimal readability and easy scrolling.
+<details>
+  <summary> **Extra Small Devices (Phones, 480px and below)** </summary>
+  ![Dashboard Screenshot](/public/ExtraSmall.png)
 
-**Small Devices (Tablets, 481px to 768px)**
-![Dashboard Screenshot](/public/ExtraSmall.png)
-The layout adjusts to a two-column view where possible, with the navbar remaining a hamburger menu but offering more space for items, while widgets are displayed in a grid format with fewer columns to maintain clarity.
+  The layout adapts to a single-column view with a hamburger menu for the navbar, and widgets are stacked vertically for optimal readability and easy scrolling.
+</details>
 
-**Medium Devices (Small Laptops, 769px to 1024px)**
-![Dashboard Screenshot](/public/MediumDevice.png)
-The layout switches to a three-column view, with the navbar potentially displaying more items and reducing reliance on the hamburger menu, while widgets are organized in a more compact grid.
+<details>
+  <summary> **Small Devices (Tablets, 481px to 768px)** </summary>
+  ![Dashboard Screenshot](/public/SmallDevice.png)
 
-**Large Devices (Desktops, 1025px and above)**
-![Dashboard Screenshot](/public/dashboardPage.png)
-The layout utilizes the full multi-column design for maximum screen space, with the navbar fully expanded and all links visible, and widgets displayed in a flexible grid layout to effectively use the larger screen size.
+  The layout adjusts to a two-column view where possible, with the navbar remaining a hamburger menu but offering more space for items, while widgets are displayed in a grid format with fewer columns to maintain clarity.
+</details>
+
+<details>
+  <summary> **Medium Devices (Small Laptops, 769px to 1024px)** </summary>
+  ![Dashboard Screenshot](/public/MediumDevice.png)
+
+  The layout switches to a three-column view, with the navbar potentially displaying more items and reducing reliance on the hamburger menu, while widgets are organized in a more compact grid.
+</details>
+
+<details>
+  <summary> **Large Devices (Desktops, 1025px and above)** </summary>
+  ![Dashboard Screenshot](/public/dashboardPage.png)
+
+  The layout utilizes the full multi-column design for maximum screen space, with the navbar fully expanded and all links visible, and widgets displayed in a flexible grid layout to effectively use the larger screen size.
+</details>
 
 **Visit the [Dashboard Management](https://accuknox-assignment-tau.vercel.app/) to get more details.**
 
 ## Features
 
-**Home Page**
+<details>
+  <summary> **Home Page** </summary>
 
   Displays the main content and includes navigation to the dashboard.
   
@@ -34,8 +46,10 @@ The layout utilizes the full multi-column design for maximum screen space, with 
   - **Content:** Displays the main content of the home page.
   - **Footer:** Always visible at the bottom.
 
+</details>
+
 <details>
-  <summary>**Dashboard Page**</summary>
+  <summary> **Dashboard Page** </summary>
 
   - Personalize the dashboard by selecting which widgets to display.
   - Refresh the dashboard to update the view.
@@ -48,28 +62,34 @@ The layout utilizes the full multi-column design for maximum screen space, with 
 
 ## Components
 
-1. **Home Page**:
-   - **Navbar**: Links to "Home" (active) and "Dashboard."
-   - **Content**: Main content of the home page.
-   - **Footer**: Contains developer details and contact information.
+<details>
+  <summary> **Home Page** </summary>
+  - **Navbar:** Links to "Home" (active) and "Dashboard."
+  - **Content:** Main content of the home page.
+  - **Footer:** Contains developer details and contact information.
+</details>
 
-2. **Dashboard Page**:
-   - **Navbar**: Contains links to "Home" (inactive), "Dashboard" (active), and a "SearchBar" (user can search the widget ).
-   - **Content**:
-     - **Personalize Button**: Allows users to select widgets to display.
-     - **Refresh Button**: Refreshes the dashboard view.
-     - **Category Name**: Displays the current widget category.
-     - **Category-wise Widgets**: Shows widgets organized by category.
-     - **Add Widget Dialog**:
-       - **Input**: For widget name.
-       - **Chart Selector**: Options for pie chart, spline chart, stack bar chart.
-       - **Data Input**: Optional text and value fields.
-       - **Cancel Button**: Closes the dialog without saving.
-       - **Confirm Button**: Saves the widget and updates the dashboard.
+<details>
+  <summary> **Dashboard Page** </summary>
+  - **Navbar:** Contains links to "Home" (inactive), "Dashboard" (active), and a "SearchBar" (user can search for widgets).
+  - **Content:**
+    - **Personalize Button:** Allows users to select widgets to display.
+    - **Refresh Button:** Refreshes the dashboard view.
+    - **Category Name:** Displays the current widget category.
+    - **Category-wise Widgets:** Shows widgets organized by category.
+    - **Add Widget Dialog:**
+      - **Input:** For widget name.
+      - **Chart Selector:** Options for pie chart, spline chart, stack bar chart.
+      - **Data Input:** Optional text and value fields.
+      - **Cancel Button:** Closes the dialog without saving.
+      - **Confirm Button:** Saves the widget and updates the dashboard.
+</details>
 
-3. **Widget Page**:
-   - Displays the category name, widget name, and chart view.
-
+<details>
+  <summary> **Widget Page** </summary>
+  - Displays the category name, widget name, and chart view.
+</details>
+**Many more...**
 ## Getting Started
 
 To get started with the project:
@@ -106,6 +126,3 @@ To get started with the project:
 - **Delete Widgets** by clicking the delete icon that appears when hovering over a widget.
 
 ---
-```
-
-This addition clarifies that users can search for widgets by their name.
