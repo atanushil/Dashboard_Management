@@ -6,28 +6,32 @@
 Welcome to the Widget Dashboard Website! This website allows users to manage and personalize a dashboard with various widgets, each displaying different types of charts. The site includes features for searching, adding, deleting widgets, and personalizing the dashboard. Also, this website is designed to be fully responsive across various breakpoints:
 
 <details>
-  <summary> **Extra Small Devices (Phones, 480px and below)** </summary>
+  <summary> Extra Small Devices (Phones, 480px and below)</summary>
+  
   ![Dashboard Screenshot](/public/ExtraSmall.png)
 
   The layout adapts to a single-column view with a hamburger menu for the navbar, and widgets are stacked vertically for optimal readability and easy scrolling.
 </details>
 
 <details>
-  <summary> **Small Devices (Tablets, 481px to 768px)** </summary>
+  <summary> Small Devices (Tablets, 481px to 768px)</summary>
+  
   ![Dashboard Screenshot](/public/SmallDevice.png)
 
   The layout adjusts to a two-column view where possible, with the navbar remaining a hamburger menu but offering more space for items, while widgets are displayed in a grid format with fewer columns to maintain clarity.
 </details>
 
 <details>
-  <summary> **Medium Devices (Small Laptops, 769px to 1024px)** </summary>
+  <summary> Medium Devices (Small Laptops, 769px to 1024px) </summary>
+  
   ![Dashboard Screenshot](/public/MediumDevice.png)
 
   The layout switches to a three-column view, with the navbar potentially displaying more items and reducing reliance on the hamburger menu, while widgets are organized in a more compact grid.
 </details>
 
 <details>
-  <summary> **Large Devices (Desktops, 1025px and above)** </summary>
+  <summary>Large Devices (Desktops, 1025px and above)</summary>
+  
   ![Dashboard Screenshot](/public/dashboardPage.png)
 
   The layout utilizes the full multi-column design for maximum screen space, with the navbar fully expanded and all links visible, and widgets displayed in a flexible grid layout to effectively use the larger screen size.
@@ -38,7 +42,7 @@ Welcome to the Widget Dashboard Website! This website allows users to manage and
 ## Features
 
 <details>
-  <summary> **Home Page** </summary>
+  <summary> Home Page </summary>
 
   Displays the main content and includes navigation to the dashboard.
   
@@ -49,7 +53,7 @@ Welcome to the Widget Dashboard Website! This website allows users to manage and
 </details>
 
 <details>
-  <summary> **Dashboard Page** </summary>
+  <summary> Dashboard Page</summary>
 
   - Personalize the dashboard by selecting which widgets to display.
   - Refresh the dashboard to update the view.
@@ -63,14 +67,14 @@ Welcome to the Widget Dashboard Website! This website allows users to manage and
 ## Components
 
 <details>
-  <summary> **Home Page** </summary>
+  <summary> Home Page </summary>
   - **Navbar:** Links to "Home" (active) and "Dashboard."
   - **Content:** Main content of the home page.
   - **Footer:** Contains developer details and contact information.
 </details>
 
 <details>
-  <summary> **Dashboard Page** </summary>
+  <summary> Dashboard Page </summary>
   - **Navbar:** Contains links to "Home" (inactive), "Dashboard" (active), and a "SearchBar" (user can search for widgets).
   - **Content:**
     - **Personalize Button:** Allows users to select widgets to display.
@@ -86,7 +90,7 @@ Welcome to the Widget Dashboard Website! This website allows users to manage and
 </details>
 
 <details>
-  <summary> **Widget Page** </summary>
+  <summary>Widget Page</summary>
   - Displays the category name, widget name, and chart view.
 </details>
 **Many more...**
